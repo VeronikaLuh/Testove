@@ -21,7 +21,7 @@ npm install
 ```
 2. **Створіть файл .env у корені проєкту та вкажіть адресу бекенду:**
 ```sh
-VITE_API_URL=http://localhost:8000/api/v1/
+API_URL=http://localhost:8000/api/v1/
 ```
 3. **Запустіть застосунок у режимі розробки:**
 ```sh
@@ -33,20 +33,20 @@ npm run dev
 
 1. **Зберіть Docker-образ:**
 ```sh
-docker build -t your_dockerhub_account/movies .
+docker build -t nikavl/movies .
 ```
 2. **Запустіть контейнер:**
 ```sh
 docker run --name movies -p 3000:3000 -e
 API_URL=http://localhost:8000/api/v1
-your_super_account/movies
+nikavl/movies
 ```
-4.  Відкрийте `http://localhost:5173` у браузері
+4.  Відкрийте `http://localhost:3000` у браузері
 ## Змінна оточення
 API_URL — адреса бекенд API (наприклад, http://192.168.1.44:8000/api/v1/).
 Передається через змінні оточення при запуску Docker-контейнера або у .env для локального запуску.
 ## Посилання на DockerHub
-`https://hub.docker.com/layers/nikavl/movies/latest/images/sha256:805558e8ddcdbe718081996b3840d224034480b328d583cadbc264523ae530b0?uuid=2D68235F-57B4-44BC-91B0-59DF0C8595A7`
+https://hub.docker.com/r/nikavl/movies/tags
 ```sh
 docker pull nikavl/movies
 ```
