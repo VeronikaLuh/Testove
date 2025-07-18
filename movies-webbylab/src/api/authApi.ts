@@ -6,10 +6,13 @@ export interface AuthResponse {
   status: number;
 }
 
+const apiUrl = window._env_?.API_URL || "http://localhost:8000/api/v1/";
+
+
 export const authApi = createApi({
   reducerPath: 'authApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:8000/api/v1/',
+    baseUrl: `${apiUrl}`,
   }),
   tagTypes: ['Auth'],
   endpoints: (builder) => ({

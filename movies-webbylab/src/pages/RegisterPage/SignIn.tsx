@@ -18,6 +18,7 @@ import { setCookies } from "../../helpers/setCookies";
 import { ACCESS_TOKEN } from "../../constants/cookies";
 import { setUser } from "../../app/authSlice";
 import { moviesApi } from "../../api/moviesRtkApi";
+import signInImage from "../../images/signin.jpg";
 
 interface FormElements extends HTMLFormControlsCollection {
   email: HTMLInputElement;
@@ -284,7 +285,7 @@ export default function SignInPage() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundImage: "url(/src/images/signin.jpg)",
+          backgroundImage: `url(${signInImage})`,
         }}
       />
     </ThemeProvider>

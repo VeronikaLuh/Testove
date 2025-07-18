@@ -17,10 +17,12 @@ export interface MovieResponse {
   };
 }
 
+const apiUrl = window._env_?.API_URL || "http://localhost:8000/api/v1/";
+
 export const moviesApi = createApi ({ 
  reducerPath: 'moviesApi',
  baseQuery: fetchBaseQuery({ 
-   baseUrl: 'http://localhost:8000/api/v1/',
+   baseUrl: `${apiUrl}`,
    prepareHeaders: (headers) => {
      headers.set('Authorization', `${getCookie(ACCESS_TOKEN)}`);
      return headers;

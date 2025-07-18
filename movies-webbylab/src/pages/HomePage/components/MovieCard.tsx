@@ -12,6 +12,7 @@ import { ListOfFilms } from "./ListOfFilms";
 import { useState } from "react";
 import { ModalCreate } from "../../AdminPage/ModalCreate";
 import { useAppSelector } from "../../../app/hooks";
+import homeImage from "../../../images/homeImage.jpg";
 
 export const MovieCard = () => {
   const navigate = useNavigate();
@@ -49,8 +50,8 @@ export const MovieCard = () => {
       >
         <CardCover>
           <img
-            src="/src/images/homeImage.jpg"
-            srcSet="/src/images/homeImage.jpg"
+            src={homeImage}
+            srcSet={homeImage}
             loading="lazy"
             alt=""
             style={{

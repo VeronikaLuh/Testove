@@ -18,6 +18,7 @@ import { ACCESS_TOKEN } from "../../constants/cookies";
 import { useAppDispatch } from "../../app/hooks";
 import { setUser } from "../../app/authSlice";
 import { moviesApi } from "../../api/moviesRtkApi"; 
+import signUpImage from "../../images/signup.jpg";
 
 type SignInFormElement = HTMLFormElement & {
   elements: {
@@ -273,7 +274,7 @@ export default function SignUpPage() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundImage: "url(/src/images/signup.jpg)",
+          backgroundImage: `url(${signUpImage})`,
         }}
       />
     </ThemeProvider>

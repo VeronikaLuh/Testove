@@ -26,6 +26,7 @@ import { BookmarkAdd } from "@mui/icons-material";
 import { useGetMoviesSearchQuery } from "../../../api/moviesRtkApi";
 import { useEffect, useState } from "react";
 import { Pagination } from "@mui/material";
+import movieImage from "../../../images/movieImage.jpg";
 
 
 export interface MovieResponseId {
@@ -176,8 +177,8 @@ export const ListOfFilms = () => {
                 </div>
                 <AspectRatio minHeight="120px" maxHeight="200px">
                   <img
-                    src="/src/images/movieImage.jpg"
-                    srcSet="/src/images/movieImage.jpg"
+                    src={movieImage}
+                    srcSet={movieImage}
                     loading="lazy"
                     alt=""
                   />
@@ -254,8 +255,8 @@ export const ListOfFilms = () => {
                 >
                   <AspectRatio ratio="1" sx={{ width: 90 }}>
                     <img
-                      src="/src/images/movieImage.jpg"
-                      srcSet="/src/images/movieImage.jpg"
+                      src={movieImage}
+                      srcSet={movieImage}
                       loading="lazy"
                       alt=""
                     />
